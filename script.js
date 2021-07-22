@@ -22,7 +22,7 @@ function loadCats(cats) {
     const eachCat = document.createElement("div");
     eachCat.className = "each-cat";
     eachCat.innerHTML = `
-    <img id="image" src="https://cataas.com/cat/${cats.id}" alt="cats_image"/>
+    <img class="image" src="https://cataas.com/cat/${cats.id}" alt="cats_image"/>
     `;
     catList.append(eachCat);
   });
@@ -65,5 +65,6 @@ function searchKey(inpVal) {
 //reset the searched value to original
 function formReset() {
   document.querySelector(".cat-list").remove();
+  document.querySelector(".searchKey").value=null;
   getCats();
 }
